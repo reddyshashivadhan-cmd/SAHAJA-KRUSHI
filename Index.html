@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>సహజ కృషి - Sahaja Krushi | Organic Farming Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Telugu', sans-serif;
+            background: linear-gradient(135deg, #f0f7f4 0%, #e8f5e9 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a3b2e 0%, #2c5e44 100%);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo i {
+            font-size: 28px;
+            color: #ffd700;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+        .lang-btn {
+            background: #ffd700;
+            color: #1a3b2e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background: #ffed4a;
+            transform: scale(1.05);
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3b2e 0%, #2c5e44 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .hero h1 {
+            font-size: 56px;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero h2 {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        .hero p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+            color: #1a3b2e;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.4);
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,215,0,0.5);
+        }
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #1a3b2e;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            color: #1a3b2e;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        /* Tool Sections */
+        .tool-section {
+            padding: 50px 0;
+        }
+        .tool-card {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .tool-card h3 {
+            color: #1a3b2e;
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tool-card h3 i {
+            color: #ffd700;
+        }
+        .tool-card > p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a3b2e;
+            font-weight: 600;
+        }
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #2c5e44;
+            box-shadow: 0 0 0 4px rgba(44,94,68,0.1);
+        }
+        select.form-control {
+            cursor: pointer;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #2c5e44 0%, #1a3b2e 100%);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 20px rgba(26,59,46,0.3);
+        }
+        /* Result Box */
+        .result-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+            border-left: 5px solid #2c5e44;
+            display: none;
+        }
+        .result-box.show {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .result-box h4 {
+            color: #1a3b2e;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .result-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 3px solid #ffd700;
+        }
+        .result-item strong {
+            color: #2c5e44;
+        }
+        /* Calculator Result */
+        .savings-result {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+            border-radius: 20px;
+            margin-top: 25px;
+            display: none;
+        }
+        .savings-result.show {
+            display: block;
+            animation: scaleIn 0.4s ease;
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .savings-amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a3b2e;
+        }
+        .savings-percent {
+            font-size: 24px;
+            color: #2c5e44;
+            margin-top: 10px;
+        }
+        /* Calendar Result */
+        .calendar-result {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+            display: none;
+        }
+        .calendar-result.show {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+        .calendar-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .calendar-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            min-width: 200px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .calendar-item i {
+            font-size: 30px;
+            color: #2c5e44;
+            margin-bottom: 10px;
+        }
+        .calendar-item h4 {
+            color: #1a3b2e;
+            margin-bottom: 5px;
+        }
+        .calendar-item p {
+            color: #666;
+        }
+        /* Tips Section */
+        .tip-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .tip-text {
+            font-size: 22px;
+            color: #1a3b2e;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+        .tip-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        /* Ad Banner */
+        .ad-banner {
+            background: linear-gradient(135deg, #1a3b2e 0%, #2c5e44 100%);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .ad-banner:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(26,59,46,0.3);
+        }
+        .ad-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .ad-content h3 {
+            color: #ffd700;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .ad-content p {
+            color: white;
+            font-size: 16px;
+        }
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a3b2e 0%, #0d1f18 100%);
+            padding: 40px 0;
+            text-align: center;
+            color: white;
+        }
+        .footer-logo {
+            font-size: 32px;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        .footer-tagline {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .footer-creator {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-creator p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+        .footer-free {
+            color: #ffd700;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero h2 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .tool-card {
+                padding: 25px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .savings-amount {
+                font-size: 36px;
+            }
+            .tip-text {
+                font-size: 18px;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Additional Styles */
+        .feature-card .fa-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span class="logo-text">సహజ కృషి</span>
+            </div>
+            <button class="lang-btn" onclick="toggleLanguage()">English</button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-icon">🌾</div>
+            <h1>సహజ కృషి</h1>
+            <h2>సేంద్రియ వ్యవసాయం చేద్దాం</h2>
+            <p>మీ పంటలను సేంద్రియంగా పండించండి, ఆరోగ్యకరమైన భవిష్యత్తును నిర్మించండి. మీ భూమిని రసాయనిక పదార్థాల నుండి విముక్తి చేయండి.</p>
+            <button class="cta-btn" onclick="scrollToSection('diagnosis')">ఉచితంగా నమోదు చేసుకోండి</button>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">మా సేవలు</h2>
+            <div class="features-grid">
+                <div class="feature-card" onclick="scrollToSection('diagnosis')">
+                    <div class="feature-icon">🔍</div>
+                    <h3>పంట రోగ నిర్ధారణ</h3>
+                    <p>మీ పంటలోని సమస్యను వివరించండి, సేంద్రియ పరిష్కారం పొందండి</p>
+                </div>
+                <div class="feature-card" onclick="scrollToSection('calculator')">
+                    <div class="feature-icon">💰</div>
+                    <h3>ఆదా లెక్కింపు</h3>
+                    <p>సేంద్రియ వ్యవసాయం చేయడం వల్ల ఎంత ఆదా చేయవచ్చో తెలుసుకోండి</p>
+                </div>
+                <div class="feature-card" onclick="scrollToSection('calendar')">
+                    <div class="feature-icon">📅</div>
+                    <h3>పంట క్యాలెండర్</h3>
+                    <p>ఏ సీజన్లో ఏమి నాటాలి, ఎప్పుడు కోయాలి తెలుసుకోండి</p>
+                </div>
+                <div class="feature-card" onclick="scrollToSection('tips')">
+                    <div class="feature-icon">🌿</div>
+                    <h3>రోజువారీ చిట్కాలు</h3>
+                    <p>సేంద్రియ వ్యవసాయం గురించి ఉపయోగకరమైన చిట్కాలు పొందండి</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Crop Diagnosis Section -->
+    <section class="tool-section" id="diagnosis">
+        <div class="container">
+            <div class="tool-card">
+                <h3><i class="fas fa-search"></i> <span data-lang="diagnosisTitle">పంట రోగ నిర్ధారణ</span></h3>
+                <p data-lang="diagnosisDesc">మీ పంట సమస్యను వివరించండి, మేము సేంద్రియ పరిష్కారం సూచిస్తాము</p>
+                
+                <div class="form-group">
+                    <label data-lang="cropLabel">పంట పేరు</label>
+                    <input type="text" class="form-control" id="cropName" data-placeholder-te="పంట పేరు నమోదు చేయండి (ఉదా: టమోటా)" data-placeholder-en="Enter crop name (e.g., Tomato)" placeholder="పంట పేరు నమోదు చేయండి (ఉదా: టమోటా)">
+                </div>
+                
+                <div class="form-group">
+                    <label data-lang="problemLabel">సమస్య వివరణ</label>
+                    <textarea class="form-control" id="problemDesc" rows="4" data-placeholder-te="సమస్యను వివరంగా వర్ణించండి..." data-placeholder-en="Describe the problem in detail..." placeholder="సమస్యను వివరంగా వర్ణించండి..."></textarea>
+                </div>
+                
+                <button class="submit-btn" onclick="getDiagnosis()">
+                    <i class="fas fa-leaf"></i>
+                    <span data-lang="getSolution">సేంద్రియ పరిష్కారం పొందండి</span>
+                </button>
+                
+                <div class="result-box" id="diagnosisResult">
+                    <h4><i class="fas fa-check-circle"></i> <span data-lang="solutionTitle">సేంద్రియ పరిష్కారం</span></h4>
+                    <div class="result-item">
+                        <strong data-lang="problemDetected">సమస్య గుర్తించబడింది:</strong>
+                        <p id="detectedProblem"></p>
+                    </div>
+                    <div class="result-item">
+                        <strong data-lang="solution">పరిష్కారం:</strong>
+                        <p id="solution"></p>
+                    </div>
+                    <div class="result-item">
+                        <strong data-lang="ingredients">కావలసిన పదార్థాలు:</strong>
+                        <p id="ingredients"></p>
+                    </div>
+                    <div class="result-item">
+                        <strong data-lang="method">తయారీ విధానం:</strong>
+                        <p id="method"></p>
+                    </div>
+                    <div class="result-item">
+                        <strong data-lang="savingsPct">ఆదా:</strong>
+                        <p id="savingsPercent"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Savings Calculator Section -->
+    <section class="tool-section" id="calculator">
+        <div class="container">
+            <div class="tool-card">
+                <h3><i class="fas fa-calculator"></i> <span data-lang="savingsTitle">ఆదా లెక్కింపు</span></h3>
+                <p data-lang="savingsDesc">మీ ఫార్మ్ సైజు ఆధారంగా సేంద్రియ వ్యవసాయం చేయడం వల్ల ఎంత ఆదా చేయవచ్చో తెలుసుకోండి</p>
+                
+                <div class="form-group">
+                    <label data-lang="acreLabel">మీ ఫార్మ్ సైజు (ఎకరాలు)</label>
+                    <input type="number" class="form-control" id="farmSize" min="0.1" step="0.1" value="1" data-placeholder-te="ఎకరాలలో సైజు నమోదు చేయండి" data-placeholder-en="Enter size in acres" placeholder="ఎకరాలలో సైజు నమోదు చేయండి">
+                </div>
+                
+                <button class="submit-btn" onclick="calculateSavings()">
+                    <i class="fas fa-chart-line"></i>
+                    <span data-lang="calculateBtn">ఆదా లెక్కించండి</span>
+                </button>
+                
+                <div class="savings-result" id="savingsResult">
+                    <div class="savings-amount" id="savingsAmount"></div>
+                    <div class="savings-percent" id="savingsPercentCalc"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Crop Calendar Section -->
+    <section class="tool-section" id="calendar">
+        <div class="container">
+            <div class="tool-card">
+                <h3><i class="fas fa-calendar-alt"></i> <span data-lang="calendarTitle">పంట క్యాలెండర్</span></h3>
+                <p data-lang="calendarDesc">మీకు ఇష్టమైన పంటను ఎంచుకోండి, నాటడం మరియు కోయడం సమయాలను తెలుసుకోండి</p>
+                
+                <div class="form-group">
+                    <label data-lang="selectCrop">పంటను ఎంచుకోండి</label>
+                    <select class="form-control" id="cropSelect" onchange="showCalendar()">
+                        <option value="" data-lang="chooseOption">-- ఎంచుకోండి --</option>
+                        <option value="rice">వరి (Rice)</option>
+                        <option value="wheat">గోధుమ (Wheat)</option>
+                        <option value="tomato">టమోటా (Tomato)</option>
+                        <option value="chili">మిరప (Chili)</option>
+                        <option value="onion">ఉల్లి (Onion)</option>
+                        <option value="brinjal">వంకాయ (Brinjal)</option>
+                    </select>
+                </div>
+                
+                <div class="calendar-result" id="calendarResult">
+                    <div class="calendar-info">
+                        <div class="calendar-item">
+                            <i class="fas fa-seedling"></i>
+                            <h4 data-lang="plantingTime">నాటడం సమయం</h4>
+                            <p id="plantingTime"></p>
+                        </div>
+                        <div class="calendar-item">
+                            <i class="fas fa-basket"></i>
+                            <h4 data-lang="harvestTime">కోయడం సమయం</h4>
+                            <p id="harvestTime"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Daily Tips Section -->
+    <section class="tool-section" id="tips">
+        <div class="container">
+            <div class="tool-card">
+                <h3><i class="fas fa-lightbulb"></i> <span data-lang="tipsTitle">రోజువారీ చిట్కాలు</span></h3>
+                <p data-lang="tipsDesc">సేంద్రియ వ్యవసాయం గురించి ఉపయోగకరమైన చిట్కాలు పొందండి</p>
+                
+                <div class="tip-box">
+                    <div class="tip-icon" id="tipIcon">🌱</div>
+                    <p class="tip-text" id="tipText">నీళ్ళు పొయ్యేలా కర్పోరం చేయడం వల్ల భూమిలో తేమ నిలువ ఉంటుంది, నీటి ఆదా చేయవచ్చు.</p>
+                </div>
+                
+                <button class="submit-btn" onclick="getNewTip()">
+                    <i class="fas fa-sync-alt"></i>
+                    <span data-lang="newTip">కొత్త చిట్కా పొందండి</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Banner -->
+    <section class="container">
+        <div class="ad-banner" onclick="trackAdClick()">
+            <span class="ad-badge">AD</span>
+            <div class="ad-content">
+                <h3>🌱 సేంద్రియ విత్తనాలు - 30% డిస్కౌంట్!</h3>
+                <p>అత్యుత్తమ నాణ్యత సేంద్రియ విత్తనాలు అత్యల్ప ధరలో</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-leaf"></i></div>
+            <p class="footer-tagline">సహజ కృషి - సేంద్రియ వ్యవసాయం చేయడం సులభతరం చేద్దాం</p>
+            
+            <div class="footer-creator">
+                <p>సృష్టికర్త: శశి వద్దన్ రెడ్డి (14 సంవత్సరాలు)</p>
+                <p class="footer-free">💚 100% ఉచితం - ప్రకటనల ద్వారా మద్దతు</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Language State
+        let currentLang = 'te';
+        
+        // Bilingual Content
+        const content = {
+            te: {
+                diagnosisTitle: 'పంట రోగ నిర్ధారణ',
+                diagnosisDesc: 'మీ పంట సమస్యను వివరించండి, మేము సేంద్రియ పరిష్కారం సూచిస్తాము',
+                cropLabel: 'పంట పేరు',
+                problemLabel: 'సమస్య వివరణ',
+                getSolution: 'సేంద్రియ పరిష్కారం పొందండి',
+                solutionTitle: 'సేంద్రియ పరిష్కారం',
+                problemDetected: 'సమస్య గుర్తించబడింది:',
+                solution: 'పరిష్కారం:',
+                ingredients: 'కావలసిన పదార్థాలు:',
+                method: 'తయారీ విధానం:',
+                savingsPct: 'ఆదా:',
+                savingsTitle: 'ఆదా లెక్కింపు',
+                savingsDesc: 'మీ ఫార్మ్ సైజు ఆధారంగా సేంద్రియ వ్యవసాయం చేయడం వల్ల ఎంత ఆదా చేయవచ్చో తెలుసుకోండి',
+                acreLabel: 'మీ ఫార్మ్ సైజు (ఎకరాలు)',
+                calculateBtn: 'ఆదా లెక్కించండి',
+                calendarTitle: 'పంట క్యాలెండర్',
+                calendarDesc: 'మీకు ఇష్టమైన పంటను ఎంచుకోండి, నాటడం మరియు కోయడం సమయాలను తెలుసుకోండి',
+                selectCrop: 'పంటను ఎంచుకోండి',
+                chooseOption: '-- ఎంచుకోండి --',
+                plantingTime: 'నాటడం సమయం',
+                harvestTime: 'కోయడం సమయం',
+                tipsTitle: 'రోజువారీ చిట్కాలు',
+                tipsDesc: 'సేంద్రియ వ్యవసాయం గురించి ఉపయోగకరమైన చిట్కాలు పొందండి',
+                newTip: 'కొత్త చిట్కా పొందండి',
+                savingsResult: 'మీ ఆదా:',
+                savingsPercentResult: '70% ఆదా చేయవచ్చు!',
+                diagnosisNotFound: 'ఈ సమస్యకు ఇంకా డేటా లేదు. స్థానిక వ్యవసాయ అధికారిని సంప్రదించండి.',
+                savingsError: 'దయచేసి సరిగ్గా ఎకరాల సైజు నమోదు చేయండి',
+                adTitle: '🌱 సేంద్రియ విత్తనాలు - 30% డిస్కౌంట్!',
+                adDesc: 'అత్యుత్తమ నాణ్యత సేంద్రియ విత్తనాలు అత్యల్ప ధరలో',
+                footerTagline: 'సహజ కృషి - సేంద్రియ వ్యవసాయం చేయడం సులభతరం చేద్దాం',
+                footerCreator: 'సృష్టికర్త: శశి వద్దన్ రెడ్డి (14 సంవత్సరాలు)',
+                footerFree: '💚 100% ఉచితం - ప్రకటనల ద్వారా మద్దతు'
+            },
+            en: {
+                diagnosisTitle: 'Crop Disease Diagnosis',
+                diagnosisDesc: 'Describe your crop problem, we will suggest organic solutions',
+                cropLabel: 'Crop Name',
+                problemLabel: 'Problem Description',
+                getSolution: 'Get Organic Solution',
+                solutionTitle: 'Organic Solution',
+                problemDetected: 'Problem Detected:',
+                solution: 'Solution:',
+                ingredients: 'Ingredients Needed:',
+                method: 'Preparation Method:',
+                savingsPct: 'Savings:',
+                savingsTitle: 'Savings Calculator',
+                savingsDesc: 'Find out how much you can save by switching to organic farming',
+                acreLabel: 'Your Farm Size (acres)',
+                calculateBtn: 'Calculate Savings',
+                calendarTitle: 'Crop Calendar',
+                calendarDesc: 'Select your preferred crop to know planting and harvest times',
+                selectCrop: 'Select Crop',
+                chooseOption: '-- Choose --',
+                plantingTime: 'Planting Time',
+                harvestTime: 'Harvest Time',
+                tipsTitle: 'Daily Tips',
+                tipsDesc: 'Get useful tips about organic farming',
+                newTip: 'Get New Tip',
+                savingsResult: 'Your Savings:',
+                savingsPercentResult: 'You can save 70%!',
+                diagnosisNotFound: 'No data available for this issue. Contact local agricultural officer.',
+                savingsError: 'Please enter a valid acre size',
+                adTitle: '🌱 Organic Seeds - 30% Discount!',
+                adDesc: 'Best quality organic seeds at lowest prices',
+                footerTagline: 'Sahaja Krushi - Making Organic Farming Easier',
+                footerCreator: 'Created by Shashi Vadhan Reddy (14 years old)',
+                footerFree: '💚 100% Free - Supported by ads'
+            }
+        };
+        
+        // Diagnosis Data
+        const diagnosisData = [
+            {
+                keywords: ['tomato', 'టమోటా', 'aphid', 'ఏఫిడ్', 'కీటకం', 'పురుగు', 'insect'],
+                problemTe: 'ఏఫిడ్ / పురుగు సమస్య',
+                problemEn: 'Aphids / Insect Problem',
+                solutionTe: 'వేప నూనె స్ప్రే',
+                solutionEn: 'Neem Oil Spray',
+                ingredientsTe: '10ml వేప నూనె + 1 లీటరు నీరు + 2ml సబ్బు',
+                ingredientsEn: '10ml Neem Oil + 1 Liter Water + 2ml Soap',
+                methodTe: 'నీటిలో నీమ్ ఆయిల్ మరియు సబ్బు కలిపి, బాగా షేక్ చేసి ప్రతి 7 రోజులకు పిచికారీ చేయండి',
+                methodEn: 'Mix neem oil and soap in water, shake well, spray every 7 days',
+                savings: '90% ఆదా!',
+                savingsEn: '90% savings!'
+            },
+            {
+                keywords: ['chili', 'మిరప', 'thrips', 'త్రిప్స్', 'తెల్లటి పురుగు', 'white insect'],
+                problemTe: 'త్రిప్స్ / తెల్లటి పురుగు',
+                problemEn: 'Thrips / White Insects',
+                solutionTe: 'వెల్లుల్లి-మిరప స్ప్రే',
+                solutionEn: 'Garlic-Chili Spray',
+                ingredientsTe: '10 వెల్లుల్లి రెబ్బలు + 10 మిరపకాయలు + 1 లీటరు నీరు',
+                ingredientsEn: '10 Garlic Cloves + 10 Chilies + 1 Liter Water',
+                methodTe: 'వెల్లుల్లి, మిరపను నీటిలో మిక్సీ చేసి, వడపోసి పిచికారీ చేయండి',
+                methodEn: 'Grind garlic and chilies in water, strain and spray',
+                savings: '87% ఆదా!',
+                savingsEn: '87% savings!'
+            },
+            {
+                keywords: ['soil', 'నేల', 'poor', 'బలహీనమైన', 'ఫలదీయత', 'fertility'],
+                problemTe: 'బలహీనమైన నేల / నేల ఫలదీయత తక్కువ',
+                problemEn: 'Poor Soil / Low Soil Fertility',
+                solutionTe: 'వర్మీకంపోస్ట్',
+                solutionEn: 'Vermicompost',
+                ingredientsTe: 'ప్రతి మొక్కకు 5kg వర్మీకంపోస్ట్',
+                ingredientsEn: '5kg Vermicompost per plant',
+                methodTe: 'ప్రతి 30 రోజులకు మొక్క చుట్టూ వర్మీకంపోస్ట్ వేయండి',
+                methodEn: 'Apply vermicompost around each plant every 30 days',
+                savings: '85% ఆదా!',
+                savingsEn: '85% savings!'
+            },
+            {
+                keywords: ['root', 'మూల', 'rot', 'పుళ్ళు', 'తెగులు', 'wilting', 'వాడిపోవడం'],
+                problemTe: 'రూట్ రాట్ / వేరు తెగులు',
+                problemEn: 'Root Rot / Root Disease',
+                solutionTe: 'కంపోస్ట్ టీ',
+                solutionEn: 'Compost Tea',
+                ingredientsTe: '1kg కంపోస్ట్ + 10 లీటరు నీరు + 1 టీస్పూన్ బెల్లం',
+                ingredientsEn: '1kg Compost + 10 Liters Water + 1 tsp Molasses',
+                methodTe: '24 గంటలు నానబెట్టి, వడపోసి మొక్కల వేరు చుట్టూ పోయండి',
+                methodEn: 'Steep for 24 hours, strain and pour around plant roots',
+                savings: '87% ఆదా!',
+                savingsEn: '87% savings!'
+            },
+            {
+                keywords: ['yellow', 'పసుపు', 'leaves', 'ఆకులు', 'wilting', 'వాడిపోవడం', 'tomato', 'టమోటా'],
+                problemTe: 'పసుపు ఆకులు / ఆకులు వాడిపోవడం',
+                problemEn: 'Yellow Leaves / Leaf Wilting',
+                solutionTe: 'కంపోస్ట్ టీ',
+                solutionEn: 'Compost Tea',
+                ingredientsTe: '1kg కంపోస్ట్ + 10 లీటరు నీరు',
+                ingredientsEn: '1kg Compost + 10 Liters Water',
+                methodTe: '24 గంటలు నానబెట్టి, వడపోసి మొక్కల చుట్టూ పోయండి',
+                methodEn: 'Steep for 24 hours, strain and pour around plants',
+                savings: '87% ఆదా!',
+                savingsEn: '87% savings!'
+            },
+            {
+                keywords: ['powdery', 'తెల్లటి', 'mildew', 'పొడి', 'white', 'fungus'],
+                problemTe: 'తెల్లటి పొడి / ఫంగస్',
+                problemEn: 'Powdery Mildew / White Fungus',
+                solutionTe: 'బేకింగ్ సోడా స్ప్రే',
+                solutionEn: 'Baking Soda Spray',
+                ingredientsTe: '1 టేబుల్ స్పూన్ బేకింగ్ సోడా + 1 లీటరు నీరు + 1 టీస్పూన్ సబ్బు',
+                ingredientsEn: '1 tbsp Baking Soda + 1 Liter Water + 1 tsp Soap',
+                methodTe: 'అన్నింటినీ కలిపి వారానికి ఒకసారి పిచికారీ చేయండి',
+                methodEn: 'Mix all ingredients and spray once a week',
+                savings: '80% ఆదా!',
+                savingsEn: '80% savings!'
+            }
+        ];
+        
+        // Crop Calendar Data
+        const cropCalendar = {
+            rice: { plantTe: 'జూన్-జూలై', harvestTe: 'అక్టోబర్-నవంబర్', plantEn: 'June-July', harvestEn: 'October-November' },
+            wheat: { plantTe: 'నవంబర్-డిసెంబర్', harvestTe: 'మార్చి-ఏప్రిల్', plantEn: 'November-December', harvestEn: 'March-April' },
+            tomato: { plantTe: 'అక్టోబర్-నవంబర్', harvestTe: 'ఫిబ్రవరి-మార్చి', plantEn: 'October-November', harvestEn: 'February-March' },
+            chili: { plantTe: 'జూన్-జూలై', harvestTe: 'అక్టోబర్-నవంబర్', plantEn: 'June-July', harvestEn: 'October-November' },
+            onion: { plantTe: 'అక్టోబర్-నవంబర్', harvestTe: 'మార్చి-ఏప్రిల్', plantEn: 'October-November', harvestEn: 'March-April' },
+            brinjal: { plantTe: 'జూన్-జూలై', harvestTe: 'అక్టోబర్-నవంబర్', plantEn: 'June-July', harvestEn: 'October-November' }
+        };
+        
+        // Tips Data
+        const tips = [
+            { te: 'నీళ్ళు పొయ్యేలా కర్పోరం చేయడం వల్ల భూమిలో తేమ నిలువ ఉంటుంది, నీటి ఆదా చేయవచ్చు.', en: 'Mulching retains soil moisture and helps save water.', icon: '💧' },
+            { te: 'నీమ్ ఆయిల్ ప్రకృతి సిద్ధమైన కీటక నాశకం. ఇది చవకైనది మరియు పర్యావరణానికి సురక్షితం.', en: 'Neem oil is a natural pesticide. It is cheap and eco-friendly.', icon: '🌿' },
+            { te: 'కాయగూరల పిండిని కంపోస్ట్‌లో కలపడం వల్ల ఆకుకూరలకు మంచి ఫలదీయత లభిస్తుంది.', en: 'Adding vegetable waste to compost provides good nutrition for leafy vegetables.', icon: '🥬' },
+            { te: 'పప్పు ధాన్యాలు నత్రజనిని భూమిలో బంధిస్తాయి. వాటిని ఇంటర్‌క్రాప్‌గా పండించండి.', en: 'Legumes fix nitrogen in soil. Grow them as intercrops.', icon: '🫘' },
+            { te: 'కాకబీన్ పక్షులను ఆకర్షిస్తుంది, ఇది కీటక నాశనంలో సహాయపడుతుంది.', en: 'Marigold attracts beneficial insects that help control pests.', icon: '🌼' },
+            { te: 'వర్షపు నీటిని సేకరించి ఉపయోగించడం వల్ల నీటి ఖర్చు తగ్గుతుంది.', en: 'Harvesting rainwater reduces water expenses.', icon: '🌧️' },
+            { te: 'అన్ని ఇతర పదార్థాలను కలిపి కంపోస్ట్ చేయడం భూమికి ఫలదీయతను పెంచుతుంది.', en: 'Composting all organic waste improves soil fertility.', icon: '♻️' },
+            { te: 'నీటి పారుదలను ఉదయం లేదా సాయంత్రం చేయండి, ఆకులకు శిలీంద్రాలు సోకకుండా ఉంటుంది.', en: 'Water in morning or evening to prevent fungal diseases on leaves.', icon: '🌅' },
+            { te: 'సేంద్రియ పద్ధతులు ఆరోగ్యకరమైన ఆహారం ఉత్పత్తి చేస్తాయి.', en: 'Organic methods produce healthier food.', icon: '🍅' },
+            { te: 'వ్యవసాయం చేయడంలో ఓర్పు కీలకం. ఫలితాలు కొన్ని సీజన్లు తర్వాత వస్తాయి.', en: 'Patience is key in farming. Results take a few seasons.', icon: '⏰' }
+        ];
+        
+        // Language Toggle Function
+        function toggleLanguage() {
+            currentLang = currentLang === 'te' ? 'en' : 'te';
+            updateLanguage();
+        }
+        
+        function updateLanguage() {
+            const lang = currentLang;
+            const data = content[lang];
+            
+            // Update all elements with data-lang attribute
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (data[key]) {
+                    el.textContent = data[key];
+                }
+            });
+            
+            // Update hero section
+            document.querySelector('.hero h1').textContent = lang === 'te' ? 'సహజ కృషి' : 'Sahaja Krushi';
+            document.querySelector('.hero h2').textContent = lang === 'te' ? 'సేంద్రియ వ్యవసాయం చేద్దాం' : "Let's Do Organic Farming";
+            document.querySelector('.hero p').innerHTML = lang === 'te' ? 'మీ పంటలను సేంద్రియంగా పండించండి, ఆరోగ్యకరమైన భవిష్యత్తును నిర్మించండి. మీ భూమిని రసాయనిక పదార్థాల నుండి విముక్తి చేయండి.' : 'Grow your crops organically and build a healthier future. Free your land from chemical fertilizers.';
+            document.querySelector('.hero .cta-btn').innerHTML = data.ctaBtn || (lang === 'te' ? 'ఉచితంగా నమోదు చేసుకోండి' : 'Register for Free');
+            
+            // Update logo
+            document.querySelector('.logo-text').textContent = lang === 'te' ? 'సహజ కృషి' : 'Sahaja Krushi';
+            
+            // Update language button
+            document.querySelector('.lang-btn').textContent = lang === 'te' ? 'English' : 'తెలుగు';
+            
+            // Update feature cards
+            document.querySelectorAll('.feature-card h3').forEach((el, idx) => {
+                const titles = lang === 'te' 
+                    ? ['పంట రోగ నిర్ధారణ', 'ఆదా లెక్కింపు', 'పంట క్యాలెండర్', 'రోజువారీ చిట్కాలు']
+                    : ['Crop Diagnosis', 'Savings Calculator', 'Crop Calendar', 'Daily Tips'];
+                if (idx < titles.length) el.textContent = titles[idx];
+            });
+            
+            document.querySelectorAll('.feature-card p').forEach((el, idx) => {
+                const descs = lang === 'te'
+                    ? ['మీ పంటలోని సమస్యను వివరించండి, సేంద్రియ పరిష్కారం పొందండి', 'సేంద్రియ వ్యవసాయం చేయడం వల్ల ఎంత ఆదా చేయవచ్చో తెలుసుకోండి', 'ఏ సీజన్లో ఏమి నాటాలి, ఎప్పుడు కోయాలి తెలుసుకోండి', 'సేంద్రియ వ్యవసాయం గురించి ఉపయోగకరమైన చిట్కాలు పొందండి']
+                    : ['Describe your crop problem and get organic solutions', 'Calculate how much you can save by going organic', 'Know when to plant and harvest for each crop', 'Get useful tips about organic farming'];
+                if (idx < descs.length) el.textContent = descs[idx];
+            });
+            
+            // Update footer
+            document.querySelector('.footer-tagline').textContent = data.footerTagline;
+            document.querySelector('.footer-creator p:first-child').textContent = data.footerCreator;
+            document.querySelector('.footer-free').textContent = data.footerFree;
+            
+            // Update ad
+            document.querySelector('.ad-content h3').textContent = data.adTitle;
+            document.querySelector('.ad-content p').textContent = data.adDesc;
+            
+            // Update placeholders
+            document.querySelectorAll('.form-control').forEach(input => {
+                if (input.type === 'text' || input.tagName === 'TEXTAREA') {
+                    const tePlaceholder = input.getAttribute('data-placeholder-te');
+                    const enPlaceholder = input.getAttribute('data-placeholder-en');
+                    if (tePlaceholder && enPlaceholder) {
+                        input.placeholder = lang === 'te' ? tePlaceholder : enPlaceholder;
+                    }
+                }
+            });
+            
+            // Update crop select options
+            const select = document.getElementById('cropSelect');
+            if (select.options[0]) select.options[0].textContent = data.chooseOption;
+            
+            // Update html lang attribute
+            document.documentElement.lang = lang === 'te' ? 'te' : 'en';
+            
+            // Update current tip text if tips section is visible
+            if (typeof currentTip !== 'undefined' && tips[currentTip]) {
+                document.getElementById('tipText').textContent = lang === 'te' ? tips[currentTip].te : tips[currentTip].en;
+                document.getElementById('tipIcon').textContent = tips[currentTip].icon;
+            }
+        }
+        
+        // Scroll to section
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Diagnosis Function
+        function getDiagnosis() {
+            const cropName = document.getElementById('cropName').value.toLowerCase();
+            const problemDesc = document.getElementById('problemDesc').value.toLowerCase();
+            const searchText = cropName + ' ' + problemDesc;
+            
+            let found = null;
+            for (let item of diagnosisData) {
+                for (let keyword of item.keywords) {
+                    if (searchText.includes(keyword.toLowerCase())) {
+                        found = item;
+                        break;
+                    }
+                }
+                if (found) break;
+            }
+            
+            const resultBox = document.getElementById('diagnosisResult');
+            const lang = currentLang;
+            
+            if (found) {
+                document.getElementById('detectedProblem').textContent = lang === 'te' ? found.problemTe : found.problemEn;
+                document.getElementById('solution').textContent = lang === 'te' ? found.solutionTe : found.solutionEn;
+                document.getElementById('ingredients').textContent = lang === 'te' ? found.ingredientsTe : found.ingredientsEn;
+                document.getElementById('method').textContent = lang === 'te' ? found.methodTe : found.methodEn;
+                document.getElementById('savingsPercent').textContent = lang === 'te' ? found.savings : found.savingsEn;
+            } else {
+                document.getElementById('detectedProblem').textContent = '-';
+                document.getElementById('solution').textContent = '-';
+                document.getElementById('ingredients').textContent = '-';
+                document.getElementById('method').textContent = '-';
+                document.getElementById('savingsPercent').textContent = content[lang].diagnosisNotFound;
+            }
+            resultBox.classList.add('show');
+        }
+        
+        // Savings Calculator
+        function calculateSavings() {
+            const acres = parseFloat(document.getElementById('farmSize').value);
+            const data = content[currentLang];
+            const resultBox = document.getElementById('savingsResult');
+            
+            if (isNaN(acres) || acres <= 0) {
+                alert(data.savingsError);
+                return;
+            }
+            
+            const chemicalCost = acres * 5000;
+            const organicCost = acres * 1500;
+            const savings = chemicalCost - organicCost;
+            
+            document.getElementById('savingsAmount').textContent = data.savingsResult + ' ₹' + savings.toLocaleString('en-IN');
+            document.getElementById('savingsPercentCalc').textContent = data.savingsPercentResult;
+            resultBox.classList.add('show');
+        }
+        
+        // Crop Calendar
+        function showCalendar() {
+            const crop = document.getElementById('cropSelect').value;
+            const resultBox = document.getElementById('calendarResult');
+            const data = cropCalendar[crop];
+            
+            if (crop && data) {
+                document.getElementById('plantingTime').textContent = currentLang === 'te' ? data.plantTe : data.plantEn;
+                document.getElementById('harvestTime').textContent = currentLang === 'te' ? data.harvestTe : data.harvestEn;
+                resultBox.classList.add('show');
+            } else {
+                resultBox.classList.remove('show');
+            }
+        }
+        
+        // Tips
+        let currentTip = Math.floor(Math.random() * tips.length);
+        
+        function getNewTip() {
+            let newTip;
+            do {
+                newTip = Math.floor(Math.random() * tips.length);
+            } while (newTip === currentTip && tips.length > 1);
+            
+            currentTip = newTip;
+            const tip = tips[currentTip];
+            document.getElementById('tipText').textContent = currentLang === 'te' ? tip.te : tip.en;
+            document.getElementById('tipIcon').textContent = tip.icon;
+        }
+        
+        // Ad Click Tracking
+        function trackAdClick() {
+            console.log('Ad clicked at: ' + new Date().toLocaleString());
+            alert(currentLang === 'te' ? 'ధన్యవాదాలు! మీరు AD లింక్‌ను క్లిక్ చేశారు.' : 'Thank you! You clicked on the ad link.');
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            getNewTip();
+            updateLanguage();
+        });
+    </script>
+</body>
+</html>
